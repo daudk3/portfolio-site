@@ -1,42 +1,223 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --accent: #f6c343;
+  --text: #f7f5ef;
+  --muted: #8a8a8a;
+  --surface: #0b0b0b;
+  --surface-soft: #0f0f0f;
+  --surface-ghost: #121212;
+  --border: #1c1c1c;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.page {
+  width: min(1120px, 100%);
+  min-height: 100vh;
+  padding: clamp(2rem, 6vw, 4.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  text-align: left;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero h1 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  margin: 0.75rem 0 1rem;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.lede {
+  max-width: 60ch;
+  color: #c7c7c7;
+  margin: 0;
+}
+
+.cta-row {
+  margin-top: 1.5rem;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid var(--accent);
+  color: var(--surface);
+  background: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.resume-button:hover {
+  transform: translateY(-2px);
+  background: #ffd873;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-heading h2 {
+  margin: 0.3rem 0 0;
+  font-size: 1.4rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+}
+
+.course-list,
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-card,
+.project-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.5rem;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.course-card--ghost {
+  background: var(--surface-ghost);
+  border-style: dashed;
+}
+
+.course-card:hover,
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.course-meta,
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.course-id {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.code {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.divider {
+  color: #2a2a2a;
+}
+
+.title {
+  color: var(--text);
+}
+
+.course-grade {
+  display: flex;
+  gap: 0.65rem;
+  align-items: baseline;
+}
+
+.grade {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.credit {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.course-focus,
+.project-description,
+.project-takeaways,
+.interest-copy {
+  margin: 0.75rem 0 0;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.project-takeaways {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.interest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interest-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.5rem;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.interest-card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.interest-title {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 1.75rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .course-meta,
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .course-grade {
+    flex-direction: row;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
