@@ -44,8 +44,7 @@ function App() {
       <header className="hero">
         <h1>Daud Khalid</h1>
         <p className="lede">
-          I'm a third-year Computer Science student at Wilfrid Laurier University focused on software development and systems engineering. I spend my time building and maintaining real-world systems, blending code, infrastructure, and automation. I'm comfortable working across Microsoft Entra ID, Azure, Linux environments, Docker, reverse proxies, and observability tooling.
-        </p>
+          Computer Science student at Wilfrid Laurier University building and operating software systems end to end. I write production-oriented code, deploy and maintain Linux-based services, and automate infrastructure using Docker, reverse proxies, and monitoring tooling. My experience includes identity and access management with Microsoft Entra ID and Azure.        </p>
         <div className="cta-row">
           <a className="resume-button" href="https://resume.daudkhalid.ca" target="_blank" rel="noreferrer">
             download resume
