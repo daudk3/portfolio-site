@@ -53,7 +53,6 @@ function App() {
       </header>
       <section className="section">
         <div className="section-heading">
-          <p className="eyebrow">build log</p>
           <h2>Build Log</h2>
         </div>
         <div className="project-list">
@@ -72,7 +71,6 @@ function App() {
       </section>
       <section className="section">
         <div className="section-heading">
-          <p className="eyebrow">interests</p>
           <h2>Interests</h2>
         </div>
         <div className="interest-list">
